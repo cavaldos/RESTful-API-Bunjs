@@ -1,5 +1,9 @@
+const MongoDB = require("./config/connectdb");
+MongoDB.connect();
+
 const server = Bun.serve({
-  port: 3000,
+  port: 4000,
+
   fetch(req) {
     return new Response("Bun!");
   },
